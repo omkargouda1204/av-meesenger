@@ -1,0 +1,107 @@
+//plugins {
+//    id 'com.android.application'
+//    id 'com.google.gms.google-services'
+//
+//
+//}
+//
+//android {
+//    namespace 'com.av.avmessenger'
+//    compileSdkVersion 34 // Ensure this is the latest version
+//
+//    defaultConfig {
+//        applicationId "com.av.avmessenger"
+////        minSdkVersion 21 // Keep this at 21 or higher
+//        minSdkVersion 23 // Update this to 23 or higher
+//
+//        targetSdkVersion 34 // Update to 34 or the latest version
+//        versionCode 1
+//        versionName "1.0"
+//
+//
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//    }
+//
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+//    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+//}
+//
+//dependencies {
+//
+//    implementation 'androidx.appcompat:appcompat:1.6.0'
+//    implementation 'com.google.android.material:material:1.7.0'
+//    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+//
+//
+//    implementation 'com.google.firebase:firebase-auth:21.0.0'
+//    implementation 'com.google.firebase:firebase-database:21.0.0' // Keep only this line
+//
+//
+//    implementation 'com.google.firebase:firebase-storage:20.1.0'
+//
+//    implementation platform('com.google.firebase:firebase-bom:33.3.0')
+//    implementation 'com.google.firebase:firebase-auth' // This will use the version specified in the BOM
+//    implementation 'com.google.firebase:firebase-database' // This will also use the version specified in the BOM
+//    implementation 'com.google.firebase:firebase-storage' // This will use the BOM version as well
+//
+//    testImplementation 'junit:junit:4.13.2'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+//    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+//    implementation 'de.hdodenhof:circleimageview:3.1.0'
+//    implementation 'com.squareup.picasso:picasso:2.8'
+//
+//}
+
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.av.avmessenger'
+    compileSdkVersion 34
+    defaultConfig {
+        applicationId "com.av.avmessenger"
+        minSdkVersion 23 // Update to 23 or higher
+        targetSdkVersion 34 // Keep this at 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation platform('com.google.firebase:firebase-bom:33.3.0')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.squareup.picasso:picasso:2.8'
+}
